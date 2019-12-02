@@ -32,7 +32,7 @@ trait PermissionMatchers { self: PermissionTree =>
         case permString => s"$BEGIN_LINE_ANCHOR$permString".r
       }
 
-    regex.findFirstMatchIn(permission.toString).isDefined
+    regex.findFirstMatchIn(permission.fullname).isDefined
   }
 
 }
