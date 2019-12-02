@@ -4,4 +4,6 @@ version := "0.1"
 
 scalaVersion := "2.11.12"
 
-libraryDependencies += "com.beachape" %% "enumeratum" % "1.5.13"
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "3.1.0" % "test"
+)
