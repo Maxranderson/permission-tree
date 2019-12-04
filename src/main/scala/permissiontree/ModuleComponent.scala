@@ -32,7 +32,7 @@ trait ModuleComponent { self: PermissionTree =>
       }
     }
 
-    def fullname: String = s"${root.map(_.fullname + PERMISSION_SEPARATOR).getOrElse("")}$name"
+    override def toString: String = s"${root.map(_.toString + PERMISSION_SEPARATOR).getOrElse("")}$name"
 
     def modules: Seq[Module] = subModules.toList
 

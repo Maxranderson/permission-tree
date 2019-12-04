@@ -1,6 +1,6 @@
 name := "permission-tree"
 
-version := "0.3"
+version := "0.4"
 
 scalaVersion := "2.11.12"
 
@@ -9,6 +9,5 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions ++= Seq(
-  "-language:reflectiveCalls",
-  "-Xsource:2.11"
+  "-language:reflectiveCalls"
 )
