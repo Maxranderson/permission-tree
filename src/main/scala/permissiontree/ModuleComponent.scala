@@ -4,7 +4,9 @@ import scala.collection.mutable.ListBuffer
 
 trait ModuleComponent { self: PermissionTree =>
 
-  abstract class Module(val name: String) { main =>
+  abstract class Module(_name: String) { main =>
+
+    val name: String = _name.toLowerCase
 
     protected val root: Option[Module]
     private val subModules: ListBuffer[Module] = ListBuffer()

@@ -21,7 +21,7 @@ trait PermissionMatchers { self: PermissionTree =>
     */
   def matchPermission(permissionString: String,
                       permission: Module#Permission): Boolean = {
-    val escapedPermissionSeparator = permissionString
+    val escapedPermissionSeparator = permissionString.toLowerCase
       .replace(PERMISSION_SEPARATOR, s"\\$PERMISSION_SEPARATOR")
     val regex =
       escapedPermissionSeparator match {
